@@ -1,0 +1,90 @@
+body{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: Nunito Sans;
+}
+
+.header{
+    background: #131313;
+    height: 83px;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.container{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+    padding: 3px;
+}
+
+.navigation{
+    display: flex;
+    margin: 0;
+    margin-left: 6px;
+}
+
+.navigation li{
+    margin-right: 27px;
+    margin-left: 28px;
+    list-style: none;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.navigation li a:hover{
+    text-decoration: none;
+    color: #E3B873;
+}
+
+.navigation li a.first_home{
+    color: #E3B873;
+}
+
+.tel a{
+    color: #E3B873;
+    margin-left: 28px;
+}
+
+.header .btn{
+    margin-right: -6px;
+}
+
+.btn{
+    width: 165px;
+    height: 37px;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    border: none;
+    font-family: Nunito Italic;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: "Nunito Sans";
+    src: url(/fonts/Nunito_Sans/NunitoSans-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Nunito Italic";
+    src: url(/fonts/Nunito_Sans/NunitoSans-Italic.ttf);
+    font-style: italic;
+    font-weight: normal;
+}

@@ -243,6 +243,158 @@ body{
     border-bottom: 1px #E3B873 solid
 }
 
+.section_3 .container{
+    margin-top: -326px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section_3 .container h2{
+    font-family: Yeseva One;
+    font-size: 20px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.section_3 p{
+    color: #363636;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 28px;
+    line-height: 37px;
+}
+
+.box_camera{
+    display: flex;
+    align-items: center;
+    width: 114px;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+.line{
+    Width: 32px;
+    Height: 1.54px;
+    background: #E3B873;
+    border-radius: 30px;
+}
+
+.img_box{
+    margin-top: 30px;
+    Width: 817px;
+    Height: 434px;
+    background-image:url(/img/png/image_2.png);
+}
+
+.blackout{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play{
+    Width: 85px;
+    Height: 85px;
+    background: #E3B873;
+    box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play img{
+    width: 28px;
+    height: 28px;
+}
+
+.hr_line{
+    margin-top: 64px;
+    Width: 55px;
+    Height: 1.54px;
+    color: #E3B873;
+    background-color: #E3B873;
+    border-radius: 30px;
+}
+
+.section_3 form{
+    margin-top: 79px;
+    display: flex;
+    align-items: center;
+}
+
+.block{
+    display: inline-block;
+    width: 231px;
+    height: 45px;
+    border-bottom: 1px solid #3636364D;
+    margin-right: 54px;
+}
+
+.block label,input{
+    display: block;
+}
+
+.block label{
+    color: rgba(54, 54, 54, 0.5);
+    font-size: 13px;
+}
+
+.block input{
+    color: #363636;
+    font-size: 14px;
+    border: none;
+    padding: 0;
+}
+
+.section_3 .btn{
+    font-family: Nunito Sans;
+    width: 200px;
+    height: 51px;
+}
+
+.first-checkbox{
+    margin-top: 31px;
+}
+
+.first-checkbox .text{
+    color: #181818;
+    font-size: 14px;
+}
+
+.label {
+    cursor: pointer;
+}
+
+.checkbox{
+    display: none;
+}
+
+.fake{
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    background: #E3B873;
+    color: #fff;
+    justify-content: center;
+}
+
+.fake::before{
+    content:"\2714";
+    font-size: 12px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.checkbox:checked + .fake::before{
+    opacity: 1;
+}
+
 @font-face {
     font-family: "Nunito Sans";
     src: url(/fonts/Nunito_Sans/NunitoSans-Regular.ttf);

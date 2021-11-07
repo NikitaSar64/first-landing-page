@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container container--height-100">
             <div class="navigation">
                 <div class="navigation__logo">
                     <span class="navigation__logo-span">
@@ -37,7 +37,7 @@
     </header>
     <main class="main">
         <section class="title">
-            <div class="title-bg-blackout">
+            <div class="title--bg-blackout">
             <div class="container">
                 <div class="title-content title-content--padding">
                     <h1 class="title-content__title">Turnkey Repair in the <br>
@@ -104,7 +104,7 @@
                         <div class="completed-projects__slider-btn">
                             <img class="completed-projects__arrow" src="img/svg/Arrow_left.svg" alt="arrow_left" >
                             <div class="completed-projects__slider-circle-box">
-                                <div class="completed-projects__slider-circle"></div>
+                                <div class="completed-projects__slider-circle completed-projects__slider-circle--active"></div>
                                 <div class="completed-projects__slider-circle"></div>
                                 <div class="completed-projects__slider-circle"></div>
                             </div>
@@ -117,27 +117,27 @@
                             <li class="completed-projects__town">Sochi Thieves</li>
                             <li class="completed-projects__town">Rostov-on-Don Patriotic</li>
                         </ul>
-                        <img class="completed-projects__img" src="img/png/png_2.png" alt="proj-2">
+                        <img class="completed-projects__img" src="img/png/compl_proj_2.png" alt="project">
                     </div>    
                 </div>
             </div>
         </section>
         <section class="control">
-            <div class="container">
-                <h3 class="section-title">online control</h3>
-                <div class="icon">
-                    <div class="icon__line-left"></div>
+            <div class="container control__container container--flex">
+                <h3 class="section-title control__section-title">online control</h3>
+                <div class="icon icon--margin-bottom-31px">
+                    <div class="icon__line"></div>
                     <img class="icon__svg" src="img/svg/camera.svg" alt="camera">
-                    <div class="icon__line-right"></div>
+                    <div class="icon__line"></div>
                 </div>
                 <div class="control__img">
                     <div class="control__blackout-img"> 
                         <div class="control__play">
-                            <img class="control__svg-play" src="" alt="">
+                            <img class="control__svg-play" src="/img/svg/play.svg" alt="play">
                         </div>
                     </div>
                 </div>
-                <hr class="hr-line">
+                <hr class="hr-line hr-line--margin">
                 <p class="control__text">
                     At each facility, a camera is installed that broadcasts the progress of work on the <br>
                     clock. At any time, you can go to our website and monitor the progress of work in <br>
@@ -145,19 +145,22 @@
                     Leave a request below and you will receive a link to the broadcast.
                 </p>
                 <form class="form" action="">
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="name">Name</label>
-                        <input class="form-group__input" type="text" value="What is your name:" id="name">
+                    <div class="form__wrapper form__wrapper--mb-35px">
+                        <div class="form-box form__form-box">
+                            <label class="label" for="name">Name</label>
+                            <input class="input" type="text" value="What is your name:" id="name">
+                        </div>
+                        <div class="form-box form__form-box">
+                            <label class="label" for="phone">Phone</label>
+                            <input class="input" type="text" value="Your phone number:" id="phone">
+                        </div>
+                        <button class="button form__button">submit</button>
                     </div>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="phone">Phone</label>
-                        <input class="form-group__input" type="text" value="Your phone number:" id="phone">
-                    </div>
-                    <button class="button">submit</button>
-                    <div class="checkbox">
+                    <div class="checkbox checkbox--justify-content-center">
                         <label class="checkbox__label">
                             <input class="checkbox__btn" type="checkbox">
-                            <span class="checkbox__text">I agree to the processing of personal data.</span>
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text checkbox__text--color">I agree to the processing of personal data.</span>
                         </label>
                     </div>
                 </form>
@@ -165,296 +168,371 @@
         </section>
         <section class="repair">
             <div class="container">
-                <h3 class="section-title">types of repair</h3>
-                <div class="icon">
-                    <div class="icon__line-left"></div>
+                <h3 class="section-title repair__section-title section-title--color">types of repair</h3>
+                <div class="icon icon--margin-bottom-31px">
+                    <div class="icon__line"></div>
                     <img class="icon__svg" src="img/svg/tool.svg" alt="tool">
-                    <div class="icon__line-right"></div>
+                    <div class="icon__line"></div>
                 </div>
                 <div class="repair__types-of-repair">
-                    <div class="repair__type">
-                        <h3 class="repair__title">Redecorating</h3>
-                        <ul class="repair__descriptiion">
-                            <li class="repair__work-description">Dismantling of old coatings</li>
-                            <li class="repair__work-description">Wallpapering</li>
-                            <li class="repair__work-description">Painting walls and ceilings</li>
-                            <li class="repair__work-description">Laying flooring</li>
-                            <li class="repair__work-description">Replacing plumbing</li>
-                            <li class="repair__work-description">Replacing sockets and switches</li>
-                            <li class="repair__work-description">Replacing doors</li>
-                        </ul>
-                        <div class="repair__price">
-                            from 900 rub / m2
+                    <div class="repair__wrapper repair__wrapper--bg-1">
+                        <div class="repair__type">
+                            <h3 class="repair__title repair--margin-left">Redecorating</h3>
+                            <ul class="repair__descriptiion repair--margin-left">
+                                <li class="repair__work-description">Dismantling of old coatings</li>
+                                <li class="repair__work-description">Wallpapering</li>
+                                <li class="repair__work-description">Painting walls and ceilings</li>
+                                <li class="repair__work-description">Laying flooring</li>
+                                <li class="repair__work-description">Replacing plumbing</li>
+                                <li class="repair__work-description">Replacing sockets and switches</li>
+                                <li class="repair__work-description">Replacing doors</li>
+                            </ul>
+                            <div class="repair__price">
+                                from 900 rub / m2
+                            </div>
                         </div>
                     </div>
-                    <div class="repair__type">
-                        <h3 class="repair__title">Overhaul</h3>
-                        <ul class="repair__descriptiion">
-                            <li class="repair__work-description">Dismantling of old coatings</li>
-                            <li class="repair__work-description">Wallpapering</li>
-                            <li class="repair__work-description">Painting walls and ceilings</li>
-                            <li class="repair__work-description">Laying flooring</li>
-                            <li class="repair__work-description">Replacing plumbing</li>
-                            <li class="repair__work-description">Replacing sockets and switches</li>
-                            <li class="repair__work-description">Replacing doors</li>
-                        </ul>
-                        <div class="repair__price">
-                            from 1800 rub / m2
+                    <div class="repair__wrapper repair__wrapper--bg-2">
+                        <div class="repair__type">
+                            <h3 class="repair__title repair--margin-left">Overhaul</h3>
+                            <ul class="repair__descriptiion repair--margin-left">
+                                <li class="repair__work-description">Dismantling of old coatings</li>
+                                <li class="repair__work-description">Wallpapering</li>
+                                <li class="repair__work-description">Painting walls and ceilings</li>
+                                <li class="repair__work-description">Laying flooring</li>
+                                <li class="repair__work-description">Replacing plumbing</li>
+                                <li class="repair__work-description">Replacing sockets and switches</li>
+                                <li class="repair__work-description">Replacing doors</li>
+                            </ul>
+                            <div class="repair__price">
+                                from 1800 rub / m2
+                            </div>
                         </div>
                     </div>
-                    <div class="repair__type">
-                        <h3 class="repair__title">Designer Repair</h3>
-                        <ul class="repair__descriptiion">
-                            <li class="repair__work-description">Dismantling of old coatings</li>
-                            <li class="repair__work-description">Wallpapering</li>
-                            <li class="repair__work-description">Painting walls and ceilings</li>
-                            <li class="repair__work-description">Laying flooring</li>
-                            <li class="repair__work-description">Replacing plumbing</li>
-                            <li class="repair__work-description">Replacing sockets and switches</li>
-                            <li class="repair__work-description">Replacing doors</li>
-                        </ul>
-                        <div class="repair__price">
-                            from 4000 rub / m2
+                    <div class="repair__wrapper repair__wrapper--bg-3">
+                        <div class="repair__type">
+                            <h3 class="repair__title repair--margin-left">Designer Repair</h3>
+                            <ul class="repair__descriptiion repair--margin-left">
+                                <li class="repair__work-description">Dismantling of old coatings</li>
+                                <li class="repair__work-description">Wallpapering</li>
+                                <li class="repair__work-description">Painting walls and ceilings</li>
+                                <li class="repair__work-description">Laying flooring</li>
+                                <li class="repair__work-description">Replacing plumbing</li>
+                                <li class="repair__work-description">Replacing sockets and switches</li>
+                                <li class="repair__work-description">Replacing doors</li>
+                            </ul>
+                            <div class="repair__price">
+                                from 4000 rub / m2
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="advantages">
-                    <div class="advantages__circle">
-                        <span class="advantages__number">01</span>
-                        <p class="advantages__text">
-                            Our specialist will arrive for measurements per day <br>
-                            contact, or appoint a date convenient for you
-                        </p>
+            </div>
+            <div class="form-wrapper">
+                <div class="container container--flex form-wrapper__container">
+                    <div class="advantages form-wrapper__advantages">
+                        <div class="advantages__circle">
+                            <span class="advantages__number">01</span>
+                            <p class="advantages__text">
+                                Our specialist will arrive for measurements per day <br>
+                                contact, or appoint a date convenient for you
+                            </p>
+                        </div>
+                        <div class="advantages__circle">
+                            <span class="advantages__number">02</span>
+                            <p class="advantages__text">
+                                Free metering
+                            </p>
+                        </div>
+                        <div class="advantages__circle">
+                            <span class="advantages__number">03</span>
+                            <p class="advantages__text">
+                                Free consultation
+                            </p>
+                        </div>
+                        <div class="advantages__circle">
+                            <span class="advantages__number">04</span>
+                            <p class="advantages__text">
+                                Get a cost estimate and <br>
+                                the timing of your future repairs
+                            </p>
+                        </div>
                     </div>
-                    <div class="advantages__circle">
-                        <span class="advantages__number">02</span>
-                        <p class="advantages__text">
-                            Free metering
-                        </p>
-                    </div>
-                    <div class="advantages__circle">
-                        <span class="advantages__number">03</span>
-                        <p class="advantages__text">
-                            Free consultation
-                        </p>
-                    </div>
-                    <div class="advantages__circle">
-                        <span class="advantages__number">04</span>
-                        <p class="advantages__text">
-                            Get a cost estimate and <br>
-                            the timing of your future repairs
-                        </p>
-                    </div>
+                    <form class="form form-wrapper__form" action="">
+                        <h3 class="form-title form-title--margin-bottom-39px">
+                            Leave a request for free <br>
+                            departure of the measurer
+                        </h3>
+                        <div class="form-box form__form-box form-box--margin-bottom-48px">
+                            <label class="label label--font-color" for="name">Name</label>
+                            <input class="input input--font-color" type="text" value="What is your name:" id="name">
+                        </div>
+                        <div class="form-box form__form-box form-box--margin-bottom-48px">
+                            <label class="label label--font-color" for="phone">Phone</label>
+                            <input class="input input--font-color" type="text" value="Your phone number:" id="phone">
+                        </div>
+                        <div class="form-box form__form-box form-box--margin-bottom-18px">
+                            <label class="label label--font-color" for="email">Email</label>
+                            <input class="input input--font-color" type="text" value="Your email" id="email">
+                        </div>
+                        <div class="checkbox checkbox--justify-content-start">
+                            <label class="checkbox__label">
+                                <input class="checkbox__btn" type="checkbox">
+                                <span class="checkbox__fake"></span>
+                                <span class="checkbox__text">I agree to the processing of personal data.</span>
+                            </label>
+                        </div>
+                        <div class="form-submit">
+                            <div class="form-submit__btn">Call the measurer</div>
+                        </div>
+                    </form>
                 </div>
-                <form class="form" action="">
-                    <h3 class="form__title">
-                        Leave a request for free <br>
-                        departure of the measurer
-                    </h3>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="name">Name</label>
-                        <input class="form-group__input" type="text" value="What is your name:" id="name">
-                    </div>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="phone">Phone</label>
-                        <input class="form-group__input" type="text" value="Your phone number:" id="phone">
-                    </div>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="email">Email</label>
-                        <input class="form-group__input" type="text" value="Your email" id="email">
-                    </div>
-                    <div class="checkbox">
-                        <label class="checkbox__label">
-                            <input class="checkbox__btn" type="checkbox">
-                            <span class="checkbox__text">I agree to the processing of personal data.</span>
-                        </label>
-                    </div>
-                    <div class="form__submit">Call the measurer</div>
-                </form>
-                <div class="advantages">
-                    <div class="advantages__circle">
-                        <img class="advantages__svg" src="" alt="" >
-                        <p class="advantages__text">
+            </div>
+            <div class="container">
+                <div class="form-block form-block--margin">
+                    <div class="form-block__wrapper">
+                        <div class="form-block__circle">
+                            <img class="form-block__svg" src="/img/svg/pig.svg" alt="pig" >
+                        </div>
+                        <p class="form-block__text">
                             Help save 10 - 20% of the <br>
                             cost of materials
                         </p>
                     </div>
-                </div>
-                <div class="realization">
-                    <div class="realization__wrapper">
-                        <h3 class="realization__title">
-                            We realize your <br>
-                            wildest fantasies
-                        </h3>
-                        <ul class="realization__list">
-                            <li class="realization__item">American classic</li>
-                            <li class="realization__item">Empire</li>
-                            <li class="realization__item">Classical</li>
-                            <li class="realization__item">Loft</li>
-                            <li class="realization__item">Minimalism</li>
-                            <li class="realization__item">Provence</li>
-                            <li class="realization__item">Romanticism</li>
-                            <li class="realization__item">Scandinavian style</li>
-                            <li class="realization__item">Mediterranean style</li>
-                            <li class="realization__item">High tech</li>
-                            <li class="realization__item">Eclecticism</li>
-                        </ul>
+                </div> 
+            </div>
+            <div class="realization">
+                <div class="realization--bg-blackout"> 
+                    <div class="container container--flex realization__container">
+                        <div class="realization__wrapper">
+                            <h3 class="realization__title">
+                                We realize your <br>
+                                wildest fantasies
+                            </h3>
+                            <ul class="realization__list">
+                                <li class="realization__item realization__item--active">American classic</li>
+                                <li class="realization__item">Empire</li>
+                                <li class="realization__item">Classical</li>
+                                <li class="realization__item">Loft</li>
+                                <li class="realization__item">Minimalism</li>
+                                <li class="realization__item">Provence</li>
+                                <li class="realization__item">Romanticism</li>
+                                <li class="realization__item">Scandinavian style</li>
+                                <li class="realization__item">Mediterranean style</li>
+                                <li class="realization__item">High tech</li>
+                                <li class="realization__item">Eclecticism</li>
+                            </ul>
+                        </div>
+                        <div class="realization__img-box">
+                            <div class="realization__img-grid realization__img-grid--first-row">
+                                <div class="realization__img-wrapper">
+                                    <img class="realization__img" src="/img/png/realization_photo_1.png" alt="design">
+                                </div>
+                                <div class="realization__img-wrapper">
+                                    <img class="realization__img" src="/img/png/realization_photo_2.png" alt="design">
+                                </div>
+                            </div>
+                            <div class="realization__img-grid realization__img-grid--second-row">
+                                <div class="realization__img-wrapper">
+                                    <img class="realization__img" src="/img/png/realization_photo_3.png" alt="design">
+                                </div>
+                                <div class="realization__img-wrapper">
+                                    <img class="realization__img" src="/img/png/realization_photo_4.png" alt="design">
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="our-clients">
             <div class="container">
-                <h3 class="section-title">our clients</h3>
-                <div class="icon">
-                    <div class="icon__line-left"></div>
+                <h3 class="section-title our-clients__section-title section-title--color ">our clients</h3>
+                <div class="icon icon--margin-bottom-21px">
+                    <div class="icon__line"></div>
                     <img class="icon__svg" src="img/svg/hands.svg" alt="hands">
-                    <div class="icon__line-right"></div>
+                    <div class="icon__line"></div>
                 </div>
                 <p class="our-clients__text">
                     80% of our customers recommend us to their <br>
                     friends and family.
                 </p>
-                <div class="our-clients__wrapper">
-                    <div class="our-clients__client-block">
-                        <img class="our-clients__client-photo" src="img/png/clients/client_1.png" alt="client" >
-                        <span class="our-clients__client-name">Fedosova Maria <br>
+                <div class="clients-wrapper clients-wrapper--margin-top-42px">
+                    <div class="client">
+                        <div class="client__data">
+                            <img class="client__photo" src="img/png/clients/client_1.png" alt="client" >
+                            <span class="client__name">
+                            Fedosova Maria <br>
                             Konstantinovna</span>
-                        <p class="our-clients__client-review">
+                        </div>
+                        <p class="client__review">
                             I want to thank the guys for their work. We put your <br>
                             shower part in repair. I am very grateful that I referred <br>
                             to the repair as to my own. Great thanks I express the <br>
-                            project to Georgia for its professionalism and <br>
-                            approach. 
+                            project to Georgia for its professionalism and approach. 
                         </p>
-                        <p class="our-clients__client-review">
+                        <p class="client__review client__review--margin-top-8px">
                             The repair process was turned out in terms, faster than <br>
                             anticipated. Team mobile and professional. Works <br>
                             performed qualitatively without comments. Quality <br>
                             satisfied. Prices democratic. I recommend these <br>
                             masters.</p>
-                        <div class="our-clients__client-order">
-                            <div class="our-clients__client-square"></div>
-                            <div class="our-clients__client-time"></div>
+                        <div class="client__order">
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-square.svg" alt="square">
+                                <span class="client__span"> 40 M2</span>
+                            </div>
+                            <div class="client__line"></div>
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-time.svg" alt="time">
+                                <span class="client__span"> 48 days</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="our-clients__client-block">
-                        <img class="our-clients__client-photo" src="img/png/clients/client_2.png" alt="client" >
-                        <span class="our-clients__client-name">
+                    <div class="client">
+                        <div class="client__data">
+                            <img class="client__photo" src="img/png/clients/client_2.png" alt="client" >
+                            <span class="client__name">
                             Afanasyev Sergey <br>
-                            Alexandrovich</span>
-                        <p class="our-clients__client-review">
+                            Alexandrovich </span>
+                        </div>
+                        <p class="client__review">
                             I want to thank the guys for their work. We put your <br>
                             shower part in repair. I am very grateful that I referred <br>
                             to the repair as to my own. Great thanks I express the <br>
-                            project to Georgia for its professionalism and <br>
-                            approach. 
+                            project to Georgia for its professionalism and approach. 
                         </p>
-                        <p class="our-clients__client-review">
+                        <p class="client__review client__review--margin-top-8px">
                             The repair process was turned out in terms, faster than <br>
                             anticipated. Team mobile and professional. Works <br>
                             performed qualitatively without comments. Quality <br>
                             satisfied. Prices democratic. I recommend these <br>
                             masters.</p>
-                        <div class="our-clients__client-order">
-                            <div class="our-clients__client-square"></div>
-                            <div class="our-clients__client-time"></div>
+                        <div class="client__order">
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-square.svg" alt="square">
+                                <span class="client__span"> 90 M2</span>
+                            </div>
+                            <div class="client__line"></div>
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-time.svg" alt="time">
+                                <span class="client__span"> 128 days</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="our-clients__client-block">
-                        <img class="our-clients__client-photo" src="img/png/clients/client_3.png" alt="client" >
-                        <span class="our-clients__client-name">
+                    <div class="client">
+                        <div class="client__data">
+                            <img class="client__photo" src="img/png/clients/client_3.png" alt="client" >
+                            <span class="client__name">
                             Kiriev Egor <br>
-                            Leonidovich
-                        </span>
-                        <p class="our-clients__client-review">
+                            Leonidovich </span>
+                        </div>
+                        <p class="client__review">
                             I want to thank the guys for their work. We put your <br>
                             shower part in repair. I am very grateful that I referred <br>
                             to the repair as to my own. Great thanks I express the <br>
-                            project to Georgia for its professionalism and <br>
-                            approach. 
+                            project to Georgia for its professionalism and approach. 
                         </p>
-                        <p class="our-clients__client-review">
+                        <p class="client__review client__review--margin-top-8px">
                             The repair process was turned out in terms, faster than <br>
                             anticipated. Team mobile and professional. Works <br>
                             performed qualitatively without comments. Quality <br>
                             satisfied. Prices democratic. I recommend these <br>
                             masters.</p>
-                        <div class="our-clients__client-order">
-                            <div class="our-clients__client-square"></div>
-                            <div class="our-clients__client-time"></div>
+                        <div class="client__order">
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-square.svg" alt="square">
+                                <span class="client__span"> 56 M2</span>
+                            </div>
+                            <div class="client__line"></div>
+                            <div class="client__options">
+                                <img class="client__img" src="/img/svg/client-time.svg" alt="time">
+                                <span class="client__span"> 86 days</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="our-clients__bg-right">
+                <div class="our-clients__bg-left"></div>   
+            </div>
         </section>
-
         <section class="adress">
-            <div class="container">
-                <form class="form" action="">
-                    <h3 class="form__title">
-                        Leave a request for free <br>
-                        departure of the measurer
-                    </h3>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="name">Name</label>
-                        <input class="form-group__input" type="text" value="What is your name:" id="name">
+            <div class="adress--bg-blackout">
+                <div class="container container--flex adress__container">
+                    <form class="form adress__form" action="">
+                        <h3 class="form-title form__form-title form-title--margin-bottom-43px">
+                            have any questions?
+                        </h3>
+                        <div class="form__wrapper">
+                            <div class="form-box form__form-box">
+                                <label class="label label--font-color" for="name">Name</label>
+                                <input class="input input--font-color" type="text" value="What is your name:" id="name">
+                            </div>
+                            <div class="form-box form__form-box">
+                                <label class="label label--font-color" for="phone">Phone</label>
+                                <input class="input input--font-color" type="text" value="Your phone number:" id="phone">
+                            </div>
+                            <div class="form-box form__form-box  form-box--width">
+                                <label class="label label--font-color" for="Question">Question</label>
+                                <input class="input input--font-color" type="text" value="I want to know:" id="Question">
+                            </div>
+                        </div>
+                        <div class="checkbox checkbox--justify-content-center">
+                            <label class="checkbox__label">
+                                <input class="checkbox__btn" type="checkbox">
+                                <span class="checkbox__fake"></span>
+                                <span class="checkbox__text">I agree to the processing of personal data.</span>
+                            </label>
+                        </div>
+                        <div class="form-submit">
+                            <div class="form-submit__btn">Submit</div>
+                        </div>
+                    </form>
+                    <span class="adress__text">
+                        Rostov-on-Don, Nansen St., 239 Shopping Center <br>
+                        Decorum Tel +7 (928) 768 32 29
+                    </span>
+                    <div class="adress__links">
+                        <div class="adress__link">
+                            <img class="adress__link-icon" src="/img/svg/email.svg" alt="icon">
+                        </div>
+                        <div class="adress__link">
+                            <img class="adress__link-icon" src="/img/svg/inst.svg" alt="icon">
+                        </div>
                     </div>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="phone">Phone</label>
-                        <input class="form-group__input" type="text" value="Your phone number:" id="phone">
-                    </div>
-                    <div class="form__form-group">
-                        <label class="form-group__label" for="qestion">Question</label>
-                        <input class="form-group__input" type="text" value="I want to know" id="qestion">
-                    </div>
-                    <div class="checkbox">
-                        <label class="checkbox__label">
-                            <input class="checkbox__btn" type="checkbox">
-                            <span class="checkbox__text">I agree to the processing of personal data.</span>
-                        </label>
-                    </div>
-                    <div class="form__submit">submit</div>
-                </form>
-                <span class="adress__text">
-                    Rostov-on-Don, Nansen St., 239 Shopping Center <br>
-                    Decorum Tel +7 (928) 768 32 29
-                </span>
-                <div class="adress__links">
-                    <div class="adress__link"></div>
-                    <div class="adress__link"></div>
+                    <img class="adress__map" src="img/png/map.png" alt="map" >
                 </div>
-                <img class="adress__map" src="img/png/map.png" alt="map" >
             </div>
         </section>
     </main>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="navigation">
-                    <div class="navigation__logo">
-                        <span class="navigation__logo-span">
-                            IC "Repair Design Project"
-                        </span>
-                    </div>
-                    <nav class="navigation__menu">
-                        <ul class="navigation__menu-items">
-                            <li class="navigation__menu-item">home</li>
-                            <li class="navigation__menu-item">projects</li>
-                            <li class="navigation__menu-item">measurement</li>
-                            <li class="navigation__menu-item">team</li>
-                            <li class="navigation__menu-item">reviews</li>
-                            <li class="navigation__menu-item">contacts</li>
-                        </ul>
-                    </nav>
-                    <div class="navigation__tel">
-                        <a class="navigation__tel-link" href="tel:" >+7 (928) 768-32-39</a>
-                    </div>
-                    <button class="button navigation__button">
-                        request a call
-                    </button>
+    <footer class="footer">
+        <div class="container container--height-100">
+            <div class="navigation">
+                <div class="navigation__logo">
+                    <span class="navigation__logo-span">
+                        IC "Repair Design Project"
+                    </span>
                 </div>
+                <nav class="navigation__menu">
+                    <ul class="navigation__menu-items">
+                        <li class="navigation__menu-item">home</li>
+                        <li class="navigation__menu-item">projects</li>
+                        <li class="navigation__menu-item">measurement</li>
+                        <li class="navigation__menu-item">team</li>
+                        <li class="navigation__menu-item">reviews</li>
+                        <li class="navigation__menu-item">contacts</li>
+                    </ul>
+                </nav>
+                <div class="navigation__tel">
+                    <a class="navigation__tel-link" href="tel:" >+7 (928) 768-32-39</a>
+                </div>
+                <button class="button navigation__button">
+                    request a call
+                </button>
             </div>
-        </footer>
+        </div>
+    </footer>
 </body>
 </html>

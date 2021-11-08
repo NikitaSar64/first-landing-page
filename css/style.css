@@ -51,7 +51,12 @@ body{
 }
 
 .navigation__menu-item{
+    cursor: pointer;
     color: #FFFFFF;
+}
+
+.navigation__menu-item:hover{
+    color: #E3B873;
 }
 
 .navigation__menu-item--active{
@@ -700,10 +705,18 @@ opacity: 1;
 
 .realization__item{
     margin: 12.5px 0 12.5px 0;
+    cursor: pointer;
+}
+
+.realization__item:hover{
+    color: #E3B873;
+    text-decoration: underline;
+    transition: 0.5s;
 }
 
 .realization__item--active{
     color: #E3B873;
+    text-decoration: underline;
 }
 
 .realization__img-box{
@@ -1015,6 +1028,671 @@ opacity: 1;
     }
 }
 
+@media (max-width: 1300px) {
+
+    /* header */
+
+    .header{
+        height: 80px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .navigation{
+        font-size: 15px;
+        justify-content: space-around;
+    }
+
+    .navigation__logo-span{
+        margin-right: 0;
+    }
+
+    .navigation__menu{
+        display: none;
+    }
+
+    .navigation__tel-link{
+        color: #FFFFFF;
+    }
+
+    .header,.footer .button{
+        font-size: 13px;
+    }
+
+    /* section "projects" */
+
+    .projects{
+        background-color: #181818;
+        height: 960px;
+    }
+
+    .completed-projects{
+        display: block;
+        padding: 0;
+    }
+
+    .completed-projects__title{
+        text-align: center;
+        font-size: 24px;
+        line-height: 31px;
+        letter-spacing: -0.07em;
+    }
+
+    .completed-projects__text{
+        display: none;
+    }
+
+    .completed-projects__text--mobile{
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        line-height: 29px;
+        margin-top: 30px;
+        margin-bottom: 71px;
+    }
+
+    .completed-project__description{
+        margin: 0;
+        padding-top: 35px;
+    }
+
+    .completed-projects__slider-btn, .completed-projects__img{
+        display: none;
+    }
+
+    .mobile-block{
+        box-sizing: border-box;
+        display: flex;
+        padding: 0 14px;
+        justify-content: space-between;
+        align-items: center;
+        Width: 70%;
+        Height: 450px;
+        background: url(/img/png/compl_proj_1.png) 0 0/100% 100% no-repeat;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+
+    .mobile-block__slider-btn{
+        Width: 45px;
+        Height: 45px;
+        background: #E3B873;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mobile-block__stroke--rotate{
+        transform: rotate(180deg);
+    }
+    
+    .completed-projects__options{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 70px;
+    }
+
+    .completed-projects__option-title{
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .completed-projects__option-description{
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    /* section "control" */
+
+    .control__container{
+        margin-top: 0;
+    }
+
+    .control__section-title{
+        color: rgba(24, 24, 24, 1);
+    }
+
+    .section-title {
+        font-size: 23px;
+    }
+
+    .control__section-title{
+        margin-top: 35px;
+    }
+
+    /* section "repair" */
+
+    .realization{
+        margin-top: 70px;
+        background-size: auto;
+    }
+
+    .repair__section-title {
+        margin-top: 65px;
+    }
+
+    .repair__types-of-repair {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .repair__wrapper{
+        margin-bottom: 70px;
+    }
+
+    .realization__container{
+        justify-content: space-around;
+    }
+
+    .realization__img-box{
+        width: 354px;
+    }
+
+    .realization__img-grid--second-row{
+        display: none;
+
+    }
+
+    .form-block{
+        display: none;
+    }
+
+    .form-wrapper{
+        display: none;
+    }
+
+    /* section "our-clients" */
+
+    .our-clients__section-title {
+        margin-top: 80px;
+    }
+
+    .clients-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client{
+        Width: 459px;
+        Height: 405px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .client__data {
+        margin: 20px 0 20px 0;
+    }
+
+    .client__review {
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .client__order{
+        margin-top: 20px;
+    }
+
+    .our-clients__bg-left {
+        height: 100%;
+    }
+
+    /* section "adress" */
+
+    .adress__map{
+        width: 100%;
+        height: 100%;
+    }
+
+    .adress__form{
+        width: 100%
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /* header */
+    
+    .header{
+        height: 70px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .navigation{
+        font-size: 15px;
+    }
+
+    .navigation__menu{
+        display: none;
+    }
+
+    .navigation__tel-link{
+        color: #FFFFFF;
+    }
+
+    .header .button{
+        display: none;
+    }
+
+    /* section "title" */
+
+    .title-content__button--size{
+        Width: 220px;
+        Height: 60px;
+    }
+
+    .button{
+        font-size: 14px;
+    }
+
+    /* section "projects" */
+
+    .projects{
+        background-color: #181818;
+        height: 820px;
+    }
+
+    .completed-projects{
+        display: block;
+        padding: 0;
+    }
+
+    .completed-projects__title{
+        text-align: center;
+        font-size: 24px;
+        line-height: 31px;
+        letter-spacing: -0.07em;
+    }
+
+    .completed-projects__text{
+        display: none;
+    }
+
+    .completed-projects__text--mobile{
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        line-height: 24px;
+        margin-top: 30px;
+        margin-bottom: 71px;
+    }
+
+    .completed-project__description{
+        margin: 0;
+        padding-top: 35px;
+    }
+
+    .completed-projects__slider-btn, .completed-projects__img{
+        display: none;
+    }
+
+    .mobile-block{
+        box-sizing: border-box;
+        display: flex;
+        padding: 0 14px;
+        justify-content: space-between;
+        align-items: center;
+        Width: 100%;
+        Height: 400px;
+        background: url(/img/png/compl_proj_1.png) 0 0/100% 100% no-repeat;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+
+    .mobile-block__slider-btn{
+        Width: 45px;
+        Height: 45px;
+        background: #E3B873;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mobile-block__stroke--rotate{
+        transform: rotate(180deg);
+    }
+    
+    .completed-projects__options{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .completed-projects__option-title{
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .completed-projects__option-description{
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    /* section "control" */
+
+    .control{
+        height: 1130px;;
+        background-color: #181818;
+    }
+
+    .control__section-title{
+        font-size: 28px;
+        line-height: 34px;
+        margin-top: 50px;
+        margin-bottom: 17px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .control__img{
+        Width: 100%;
+        Height: 319px;
+        background-size: contain;
+        margin-top: 9px;
+    }
+
+    .control__play{
+        Width: 37px;
+        Height: 37px;
+    }
+
+    .control__svg-play{
+        display: block;
+        Width: 12.19px;
+        Height: 12.19px;
+        margin: 12px 12px 12px 14px;
+    }
+
+    .hr-line{
+        Width: 95px;
+        Height: 1.54px;
+    }
+
+    .hr-line--margin{
+        margin: 0;
+        margin-top: 28px;
+        margin-bottom: 8px;
+    }
+
+    .control__text{
+        display: none;
+    }
+
+    .control__text--mobile{
+        display: block;
+        font-size: 14px;
+        line-height: 26px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-top: 15px;
+    }
+
+    .control .form__wrapper{
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        height: 154px;
+        margin: 0;
+        margin-top: 74px;
+    }
+
+    .control .form__form-box{
+        width: 400px;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+        margin: 0;
+    }
+
+    .form__form-box{
+        height: 45px;
+        box-sizing: border-box;
+    }
+
+    .label{
+        font-size: 13px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .input{
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+
+    .form .button{
+        display: none;
+    }
+
+    .checkbox__text{
+        margin-left: 5px;
+    }
+
+    .checkbox__text--color{
+        color: #FFFFFF;
+    }
+
+    .checkbox{
+        margin-top: 26px;
+    }
+
+    .control .button--display-none{
+        display: block;
+        Width: 340px;
+        Height: 51px;
+        border-radius: 0;
+        box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+        margin: 0 auto;
+        margin-top: 59px;
+    }
+
+    /* section "repair" */
+
+    .repair__section-title {
+        margin-top: 65px;
+    }
+
+    .repair__types-of-repair {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .repair__wrapper{
+        margin-bottom: 70px;
+    }
+
+    .realization{
+        display: none;
+    }
+
+    .realization-mobile{
+        display: block;
+    }
+
+    .realization__title{
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        margin: 20px 0 40px 0;
+    }
+
+    .repair .mobile-block{
+        background: url(/img/bg_3.jpg) 0 0/100% 100% no-repeat;
+        position: relative;
+        z-index: 5;
+    }
+
+    .form-block{
+        display: none;
+    }
+
+    .form-wrapper{
+        display: none;
+    }
+
+    /* section "our-clients" */
+
+    .our-clients__section-title {
+        margin-top: 80px;
+    }
+
+    .clients-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client{
+        Width: 459px;
+        Height: 405px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .client__data {
+        margin: 20px 0 20px 0;
+    }
+
+    .client__review {
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .client__order{
+        margin-top: 20px;
+    }
+
+    .our-clients__bg-left {
+        height: 65%;
+    }
+
+
+    /* section "adress" */
+
+    .adress, .adress--bg-blackout{
+        height: 1185px;
+        background-color: #181818;
+        margin-top: -154px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .adress__form{
+        width: 100%;
+        background-color: #181818;
+        margin-top: 50px;
+    }
+
+    .adress .form__wrapper{
+        display: flex;
+        flex-direction: column;
+        height: 263px;
+        width: 100%;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0;
+    }
+
+    .adress .form__form-title{
+        margin-bottom: 49px;
+    }
+
+    .adress .form__form-box{
+        width: 400px;
+    }
+
+    .adress .checkbox{
+        margin-top: 22px;
+    }
+
+    .adress .form-submit__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        Width: 340px;
+        Height: 51px;
+        border-radius: 0;
+        box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.1);
+        margin-top: 52px;
+    }
+
+    .adress__map-mobile{
+        display: block;
+        Width: 340px;
+        Height: 255px;
+        margin-top: 132px;
+    }
+
+    .adress__text-mobile{
+        display: block;
+        font-family: Yeseva One;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #E3B873;
+        margin-top: 39px;
+    }
+
+    .adress__links{
+        width: 99px;
+    }
+
+    .adress__link{
+        Width: 39px;
+        Height: 39px;
+    }
+
+    .adress__link-icon{
+        Width: 19.5px;
+        Height: 15.6px;
+    }
+
+    .adress__link-icon--mobile{
+        Width: 16.71px;
+        Height: 16.71px;
+    }
+
+    .adress__text{
+        display: none;
+    }
+
+    .adress__map{
+        display: none;
+    }
+
+    .adress__map-mobile{
+        display: block;
+        width: 500px;
+        height: 350px;
+    }
+
+    /* footer */
+
+    .footer{
+        display: none;
+    }
+}
+
 @media (max-width: 375px) {
 
     /* header */
@@ -1025,6 +1703,11 @@ opacity: 1;
 
     .container{
         width: 340px;
+    }
+
+    .navigation{
+        font-size: 11px;
+        justify-content: space-between;
     }
 
     .navigation__menu{
@@ -1067,6 +1750,7 @@ opacity: 1;
 
     .title-content__button--size{
         Width: 338.61px;
+        height: 51px;
     }
 
     .button--display-block{
@@ -1083,6 +1767,7 @@ opacity: 1;
 
     .projects{
         background-color: #181818;
+        height: 743px;
     }
 
     .completed-projects{
@@ -1147,8 +1832,10 @@ opacity: 1;
     }
     
     .completed-projects__options{
+        display: grid;
         grid-template-columns: 150px 180px;
         grid-row-gap: 30px;
+        margin-top: 30px;
     }
 
     .completed-projects__option-title{
@@ -1364,7 +2051,7 @@ opacity: 1;
     /* section "adress" */
 
     .adress, .adress--bg-blackout{
-        height: 1195px;
+        height: 1200px;
         background-color: #181818;
         margin-top: -154px;
         position: relative;

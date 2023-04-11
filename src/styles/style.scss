@@ -1,0 +1,122 @@
+@import './variables.scss';
+
+*{
+    font-family: "Nunito Sans";
+}
+
+// common
+
+.container{
+    max-width: 1250px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+// header
+
+.header{
+    background: $main-black;
+    height: 80px;
+    position: relative;
+    z-index: 5;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.logo{
+    color: $white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: $main-gold;
+}
+
+.nav__menu{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav__menu-link, .call{
+    text-decoration: none;
+    font-family: "Nunito Sans";
+    color: $white;
+    text-transform: uppercase;
+    position: relative;
+    transition: .2s linear;
+}
+
+.call::after, .nav__menu-link:after{
+    content: '';
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    background: $main-gold;
+    transition: .2s linear;
+}
+
+.call:hover, .nav__menu-link:hover{
+    color: $main-gold;
+}
+
+.call:hover:after, .nav__menu-link:hover:after{
+    width: 100%;
+}
+
+main{
+    flex-grow: 1;
+}
+
+// hero
+
+.hero{
+    background: rgba(0, 0, 0, 0.7);
+    position: relative;
+    min-height: 100vh;
+    margin-top: -80px;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+.hero__bg{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+// buttons
+
+.btn{
+    border-radius: 2px;
+    border: none;
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    transition: .2s linear;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+}
+
+.btn-primary{
+    background: $main-gold;
+}
+
+.btn-primary:hover{
+    box-shadow: 0 0 0 2px $white, 0 0 0 2px; 
+}
+
+.btn-light{
+    color: $white;
+    border: 1px solid #FFFFFF;
+}

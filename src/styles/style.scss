@@ -26,6 +26,44 @@
     justify-content: center;
 }
 
+.section-icon{
+    margin: 0 auto;
+
+    position: relative;
+
+    width: fit-content;
+}
+
+.section-icon::after{
+    content: '';
+
+    width: 32px;
+    height:  1.5px;
+
+    background: $main-gold;
+
+    border-radius: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: 40px;
+}
+
+.section-icon::before{
+    content: '';
+
+    width: 32px;
+    height:  1.5px;
+
+    background: $main-gold;
+
+    border-radius: 30px;
+
+    position: absolute;
+    top: 50%;
+    right: 40px;
+}
+
 // header
 
 .header{
@@ -314,6 +352,103 @@ main{
     color: $white;
 }
 
+// control
+
+.control{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control__title{
+    margin: 20px 0;
+}
+
+.control__text{
+    position: relative;
+
+    padding: 0 40px;
+
+    font-size: 18px;
+    line-height: 37px;
+
+    text-align: center;
+}
+
+.control__text::before{
+    content: '';
+
+    width: 55px;
+    height:  2.5px;
+
+    background: $main-gold;
+
+    border-radius: 30px;
+    
+    position: absolute;
+    top: -10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.control__video{
+    margin: 20px auto 40px;
+
+    max-width: 800px;
+
+    padding: 20%;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    video{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+}
+
+.control__video-play{
+    width: 100%;
+    height: 100%;
+
+    background: #18181854;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control__video-play-btn{
+    width: 60px;
+    height: 60px;
+
+    background: $main-gold url('../assets/img/icons/play.svg') no-repeat 60%;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: scale 0.5s;
+}
+
+.control__video-play-btn:hover{
+    scale: 1.1;
+}
+
 // scroll-button
 
 .mouse{
@@ -502,7 +637,7 @@ main{
 
     text-transform: uppercase;
 
-    margin: 0;
+    letter-spacing: 2.5px;
 }
 
 .title--primary{
@@ -515,4 +650,7 @@ main{
     font-size: 20px;
 
     color: #181818;
+
+    text-align: center;
 }
+

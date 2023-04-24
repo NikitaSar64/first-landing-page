@@ -31,6 +31,9 @@ module.exports = () => {
                 use: [MiniCssExtractPlugin.loader,
                   {
                     loader: "css-loader", 
+                    options: {
+                      url: false,
+                    },
                   },
                   {
                     loader: "postcss-loader",
@@ -41,11 +44,11 @@ module.exports = () => {
                     }   
                   },
                   {
-                    loader: "sass-loader"
+                    loader: "sass-loader",
                   }],
               },
               {
-                test: /\.(png|jpe?g|gif|svg)$/i,
+                test: /\.(png|jpe?g|gif|svg|mp4|webm)$/i,
                 loader: 'file-loader',
                 options: {
                   name: '[name].[ext]',
@@ -59,7 +62,7 @@ module.exports = () => {
                 template: indexHTML,
             }), 
             new MiniCssExtractPlugin({
-                filename: 'style.css',
+                filename: 'styles/style.css',
             }),
             new CopyPlugin({
                 patterns: [

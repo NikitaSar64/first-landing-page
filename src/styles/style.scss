@@ -303,8 +303,6 @@ main{
 .projects__wrapper{
     max-height: 600px;
 
-    overflow: hidden;
-
     display: grid;
     grid-template-columns: 35% 60%;
     justify-content: space-between;
@@ -558,9 +556,19 @@ main{
 // advantages
 
 .advantages{
+    display: flex;
+    align-items: center;
+
     min-height: 100vh;
 
     position: relative;
+}
+
+.advantages__wrapper{
+    display: flex;
+    gap: 30px;
+
+    margin-bottom: 30px;
 }
 
 .advantages__list{
@@ -568,6 +576,10 @@ main{
 }
 
 .advantages__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     list-style: none;
     counter-reset: ol-numbers;
     li{
@@ -589,6 +601,10 @@ main{
         width: 42px;
         height: 42px;
 
+        margin-right: 15px;
+
+        flex-shrink: 0;
+
         display: flex;
 
         justify-content: center;
@@ -606,6 +622,157 @@ main{
     }
 }
 
+.advantages__form{
+    padding: 30px 50px;
+
+    flex-basis: 35%;
+
+    display: flex;
+    flex-direction: column;
+
+    h4{
+        margin-bottom: 40px;
+    }
+    label{
+        margin-bottom: 40px;
+    }
+    button{
+        width: fit-content;
+
+        margin-left: auto;
+    }
+}
+
+.sale{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sale__icon{
+    padding: 10px;
+
+    background: $main-gold;
+
+    border-radius: 50%;
+
+    width: fit-content;
+
+    margin-right: 15px;
+}
+
+.sale__text{
+    font-size: 18px;
+    line-height: 26px;
+
+    color: $main-gold;
+
+    text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+// realization
+
+.realization{
+    min-height: 100vh;
+
+    position: relative;
+}
+
+.realization__bg{
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(109.8deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+.realization__wrapper{
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 40px 0;
+
+    box-sizing: border-box;
+    div:nth-of-type(1){
+        max-width: 35%;
+    }
+}
+
+.realization{
+    .swiper-realization-left, .swiper-realization-right {
+        max-width: 350px;
+        height: 100%;
+
+        flex-grow: 1;
+        .swiper-slide{
+            background: transparent;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            img{
+                display: block;
+
+                object-fit: cover;
+
+                width: 350px;
+                height: 400px;
+            }
+        }
+    }
+    .swiper-realization-left{
+        margin-top: -30px;
+    }
+    .swiper-realization-right{
+        margin-top: 30px;
+    }
+}
+
+.realization__title{
+    color: $main-gold;
+
+    font-size: 25px;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+.realization__list{
+    list-style: none;
+}
+
+.realization__list-item{
+    width: fit-content;
+
+    cursor: pointer;
+
+    color: $white;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 38px;
+
+    transition: all 0.5s ease;
+}
+
+.realization__list-item--active{
+    color: $main-gold;
+
+    border-bottom: 1px solid $main-gold;
+}
+
+.realization__list-item:hover{
+    color: $main-gold;
+}
 
 // scroll-button
 
@@ -815,8 +982,6 @@ main{
 // form
 
 .form{
-    padding: 30px 50px;
-
     background: $main-black;
     label{
         color: rgba(255, 255, 255, 0.5);
@@ -849,6 +1014,12 @@ main{
     color: $white;
 }
 
+.form__input{
+    display: block;
+
+    width: 100%;
+}
+
 .checkbox{
     cursor: pointer;
 }
@@ -868,15 +1039,26 @@ main{
 
 .checkbox__fake::before{
     content: "\2714";
+
     font-size: 12px;
+
     opacity: 0;
+
     transition: 0.2s;
 
-    color: #181818;
+    color: $white;
+}
+
+.checkbox__btn:checked + .checkbox__fake::before {
+    opacity: 1;
 }
 
 .checkbox__text{
     color: $white;
 
     font-size: 14px;
+}
+
+.form__btn{
+    border-radius: 0;
 }

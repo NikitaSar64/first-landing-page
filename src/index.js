@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
+import * as ymaps from 'ymaps';
 
 import './styles/normalize.css';
 import './styles/style.scss';
@@ -112,3 +113,20 @@ videoPlayBtn.addEventListener('click', () => {
 video.addEventListener('ended', () => {
   videoWrapper.style.display = 'flex';
 })
+
+// map
+
+const coordinate = [47.24463981492797,39.72319129462243];
+
+function init(){
+  const map = new ymaps.Map('map', {
+    center: coordinate,
+    zoom: 19,
+  })
+
+  const marker = new ymaps.Placemark(coordinate)
+  map.geoObjects.add(marker);
+}
+
+ymaps.ready(init);
+

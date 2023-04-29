@@ -551,13 +551,43 @@
         </section>
 
         <section class="contacts">
-            
-
+            <div class="container">
+                <div class="contacts__wrapper">
+                    <form class="form contacts__form" action="#">
+                        <h4 class="form__title">Have any questions?</h4>
+                        <label for="name">Name
+                            <input class="form__input" type="text" name="name" placeholder="What is your name">
+    
+                        </label>
+                        <label for="phone">Phone
+                            <input class="form__input" type="text" name="phone" placeholder="Your phone number">
+    
+                        </label>
+                        <label for="email">Email
+                            <input class="form__input" type="text" name="email" placeholder="Your email">  
+    
+                        </label>
+                        <label class="checkbox">
+                            <input class="checkbox__btn" type="checkbox">
+                            <span class="checkbox__fake"></span>
+                            <span class="checkbox__text">I agree to the processing of personal data.</span>
+                        </label>
+                        <button class="btn btn--primary btn--middle form__btn" type="submit">submit</button>
+                    </form>
+                    <div class="contacts__map">
+                        <div id='map'></div>
+                        <address class="contacts__address">
+                            <span>rostov-on-don, nansen st., 239 shopping center
+                                decorum</span>
+                            <span>+7 (928) 768 32 29</span>
+                        </address>
+                    </div>
+                </div>
+            </div>
         </section>
-
     </main>
 
-    <footer class="header">
+    <footer class="footer">
         <div class="container">
             <div class="navigation">
                 <a class="logo" href="index.html">IC "Repair Design Project"</a>

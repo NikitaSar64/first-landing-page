@@ -56,6 +56,10 @@ module.exports = () => {
               }
             ],
           },
+        externalsType: "script",
+        externals: {
+          ymaps: ["https://api-maps.yandex.ru/2.1/?apikey=3267801e-10a9-43c9-a80b-90a4076a908b&lang=ru-RU", "ymaps"]
+        },
         plugins: [
             new CleanWebpackPlugin(),
             new HtmlWebpackPlugin({
@@ -71,7 +75,8 @@ module.exports = () => {
                     to: BUILD_DIRECTORY_ASSETS,
                   },],
             }),
-        ]
+        ],
+        
     }
 }
 

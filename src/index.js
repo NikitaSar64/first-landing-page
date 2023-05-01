@@ -98,7 +98,7 @@ const video = document.querySelector('video');
 const videoWrapper = document.querySelector('.control__video-play');
 const videoPlayBtn = document.querySelector('.control__video-play-btn');
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   video.insertAdjacentHTML('afterBegin', `
     <source src='assets/video/test-video.webm' type='video/webm'>
     <source src='assets/video/test-video.mp4' type='video/mp4'>

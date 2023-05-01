@@ -771,12 +771,31 @@ main{
 .clients{
     min-height: 100vh;
 
+    position: relative;
+
     display: flex;
     align-items: center;
 
     .container{
         flex-grow: 1;
     }
+}
+
+.clients__bg{
+    opacity: 0.05;
+
+    height: 50%;
+    width: 100%;
+
+    display: block;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: -1;
+
+    object-fit: cover;
 }
 
 .clients__title{
@@ -799,6 +818,8 @@ main{
 
 .client{
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+
+    background: $white;
 
     max-width: 380px;
 

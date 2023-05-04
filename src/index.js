@@ -59,6 +59,18 @@ const swiperRight = new Swiper('.swiper-realization-right', {
   initialSlide: document.querySelectorAll('.realization__list-item').length - 1,
 });
 
+const swiperMobile = new Swiper('.swiper-mobile', {
+  direction: 'horizontal',
+  loop: true,
+  modules: [Navigation],
+
+  navigation: {
+    nextEl: '.swiper-mobile-button-next',
+    prevEl: '.swiper-mobile-button-prev',
+  },
+
+});
+
 
 function setStyleFirstActiveNameSlide(sliderName, activeSliderName){
   document.querySelector(`.${sliderName}`).classList.add(activeSliderName);
@@ -130,3 +142,13 @@ function init(){
 
 ymaps.ready(init);
 
+// burger menu
+
+const burgerMenu = document.querySelector('.toggle-container');
+const burgerBtn = document.querySelector('.burger');
+
+burgerMenu.addEventListener('click', () => {
+  burgerBtn.classList.toggle('active');
+  document.querySelector('.button-toggle').classList.toggle('open');
+  document.body.classList.toggle('no-scroll');
+})

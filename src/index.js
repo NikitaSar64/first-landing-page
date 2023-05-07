@@ -152,3 +152,133 @@ burgerMenu.addEventListener('click', () => {
   document.querySelector('.button-toggle').classList.toggle('open');
   document.body.classList.toggle('no-scroll');
 })
+
+// fullscreen slider
+
+let slider = document.querySelector('main'),
+    sliderItem = document.querySelectorAll('main section'),
+    dots = document.querySelector('.dots'),
+    step = sliderItem[0].offsetHeight;
+
+let header = document.querySelector('header');
+let footer = document.querySelector('footer');
+
+if (!localStorage.getItem('active-section')){
+  localStorage.setItem('active-section', 0);
+}
+
+let currentPage = +localStorage.getItem('active-section'),
+    canDrag     = false,
+    canWeel     = true,
+    intialMousePostions = 0;
+
+// init active section    
+    
+slider.style.transform = `translateY(-${currentPage * step}px)`;
+footer.style.transform = `translateY(-${currentPage * step}px)`;
+
+checkActiveSection()
+
+// init dots
+
+sliderItem.forEach(item => {
+  dots.insertAdjacentHTML('afterbegin', `<div class="dots-item"></div>`)
+})
+
+let dotsItems = document.querySelectorAll('.dots-item');
+dotsItems[currentPage].classList.add('active');
+
+// functions
+
+const changePage = (nextPage) => {
+    slider.style.transform = `translateY(-${step * nextPage}px)`;
+}
+
+const getNextPage = (direction) => {
+    if(direction === 'next' && currentPage < sliderItem.length - 1){
+      currentPage = currentPage + 1;
+      return currentPage;
+    }
+    else if(direction === 'prev' && currentPage > 0){
+      currentPage = currentPage - 1;
+      return currentPage;
+    }
+    else {
+      return false;
+    }
+}
+
+function checkActiveSection(){
+  if (currentPage == 0){
+    header.style.display = 'block';
+  } else {
+    header.style.display = 'none';
+  }
+
+  if (currentPage == sliderItem.length - 1){
+    footer.style.display = 'block';
+    footer.style.transform = `translateY(-${currentPage * step}px)`;
+  } else {
+    footer.style.display = 'none';
+  }
+}
+
+const resetCanWeel = () => canWeel = true;
+
+const togleActiveBtn = (id) => {
+  dotsItems.forEach((item) => {
+    if (id == 2 || id == 3 || id == 4 || id == 6){
+      item.className = 'dots-item dots--black';
+    } else {
+      item.className = 'dots-item dots--white';
+    }
+  })
+  dotsItems[id].classList.add('active');
+}
+
+togleActiveBtn(currentPage)
+
+// Listeners
+
+// Control slider use dots
+
+dotsItems.forEach((item, id) => {
+  item.addEventListener('click', (e) => {
+      currentPage = id;
+      localStorage.setItem('active-section', currentPage)
+      togleActiveBtn(id);
+      changePage(currentPage);
+
+      checkActiveSection();
+  })
+})
+
+// Control slider use mouseweel
+
+slider.addEventListener('mousewheel',(e) => {
+  if(canWeel){
+    let nextPage = false;
+    if(e.deltaY < -90){
+      canWeel = false;
+      nextPage = getNextPage('prev');
+      setTimeout(()=>{
+        resetCanWeel();
+      },1000)
+    }
+    else if(e.deltaY > 90) {
+      canWeel = false;
+      nextPage = getNextPage('next');
+      setTimeout(()=>{
+        resetCanWeel();
+      },1000)
+    }
+    if(nextPage !== false){
+      changePage(nextPage);
+      togleActiveBtn(currentPage);
+    } 
+  }
+
+  localStorage.setItem('active-section', currentPage)
+
+  checkActiveSection();
+})

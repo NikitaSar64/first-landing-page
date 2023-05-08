@@ -1,4 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import * as ymaps from 'ymaps';
 
 import './styles/normalize.css';
@@ -13,7 +13,7 @@ import 'swiper/css';
 const swiper = new Swiper('.swiper-projects', {
     direction: 'horizontal',
     loop: true,
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
 
     breakpoints: {
       950: {
@@ -28,6 +28,10 @@ const swiper = new Swiper('.swiper-projects', {
           prevEl: '.prev-mobile',
         },
       }
+    },
+
+    autoplay: {
+      delay: 2000,
     },
 
     pagination: {

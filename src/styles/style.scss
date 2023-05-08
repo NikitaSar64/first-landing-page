@@ -395,6 +395,17 @@ main{
     }
 }
 
+@media (max-width: 650px) {
+    .hero{
+        .hero__title{
+            font-size: 30px;
+        }
+        .hero__description{
+            font-size: 20px;
+        }  
+    } 
+}
+
 // projects
 
 .projects{
@@ -587,13 +598,16 @@ main{
             width: 90%;
             .swiper-button-mobile{
                 display: flex;
+
+                width: 40px;
+                height: 40px;
             }
         }
         .swiper-wrapper-btn{
             display: none;
         }
         .swiper-button-mobile::before, .swiper-button-mobile::after{
-            font-size: 25px;
+            font-size: 18px;
         }
     }
 }
@@ -710,6 +724,18 @@ main{
 
 .control__video-play-btn:hover{
     scale: 1.1;
+}
+
+@media (max-width: 950px) {
+    .control__video{
+        height: 400px;
+    }
+}
+
+@media (max-width: 650px) {
+    .control__video{
+        height: 300px;
+    }
 }
 
 // repair-type
@@ -1117,8 +1143,8 @@ main{
                 }
             }
             .swiper-button-mobile{
-                width: 50px;
-                height: 50px;
+                width: 40px;
+                height: 40px;
     
                 color: $white;
     
@@ -1127,7 +1153,7 @@ main{
                 border-radius: 50%;
             }
             .swiper-button-mobile::after, .swiper-button-mobile::before{
-                font-size: 25px;
+                font-size: 18px;
             }
         }
     }
@@ -1738,5 +1764,41 @@ main{
     }
     body{
         overflow: auto;
+    }
+}
+
+// button up
+
+.btn-up {
+    position: none;
+
+    padding: 5px;
+
+    background-color: $main-gold;
+
+    right: 20px;
+    bottom: 0;
+
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    cursor: pointer;
+
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 50px;
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media (max-width: 650px) {
+    .btn-up{
+        position: fixed;
     }
 }

@@ -15,9 +15,19 @@ const swiper = new Swiper('.swiper-projects', {
     loop: true,
     modules: [Navigation, Pagination],
 
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    breakpoints: {
+      950: {
+        navigation: {
+          nextEl: '.next',
+          prevEl: '.prev',
+        },
+      },
+      0: {
+        navigation: {
+          nextEl: '.next-mobile',
+          prevEl: '.prev-mobile',
+        },
+      }
     },
 
     pagination: {

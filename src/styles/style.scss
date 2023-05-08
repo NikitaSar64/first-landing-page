@@ -1194,6 +1194,8 @@ main{
 
 .client__data{
     display: flex;
+
+    align-items: center;
 }
 
 .client__photo{
@@ -1218,7 +1220,7 @@ main{
 .client__name{
     font-family: 'Yeseva One', cursive;
 
-    font-size: 18px;
+    font-size: 17px;
     line-height: 23px;
 
     margin-left: 15px;
